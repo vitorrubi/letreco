@@ -86,6 +86,10 @@ const moveToNextRow = () => {
 };
 
 const handleKeyboardOnClick = (key) => {
+  const alphabetRegex = /^[A-Za-z]$/;
+  if (!alphabetRegex.test(key)) {
+    return;
+  }
   if (currentColumn === columns) {
     return;
   }
@@ -133,7 +137,7 @@ const handleEnter = () => {
 };
 
 const enterButton = document.createElement("button");
-enterButton.addEventListener("click", handleEnter);
+enterButton.addEventListener("click", checkGuess);
 enterButton.textContent = "ENTER";
 backspaceAndEnterRow.append(enterButton);
 
