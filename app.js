@@ -12,7 +12,7 @@ const rows = 6;
 const columns = 5;
 let currentRow = 0;
 let currentColumn = 0;
-const letreco = "TESTE";
+const letreco = "VASCO;
 let letrecoMap = {};
 for (let index = 0; index < letreco.length; index++) {
   letrecoMap[letreco[index]] = index;
@@ -51,7 +51,7 @@ const checkGuess = () => {
       if (letrecoMap[letter] === index) {
         currentColumns[index].classList.add("right");
       } else {
-        currentColumns[index].classList.add("dispaced");
+        currentColumns[index].classList.add("displaced");
       }
     }
   }
